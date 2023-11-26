@@ -1,0 +1,55 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "da11b690c28c01742723d528e88b57d5",
+    "packages": [
+        {
+            "name": "micilini/video-stream",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/micilini/video-stream.git",
+                "reference": "a3418a2412621dae1a4e06f57bae4f2f47074662"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/micilini/video-stream/zipball/a3418a2412621dae1a4e06f57bae4f2f47074662",
+                "reference": "a3418a2412621dae1a4e06f57bae4f2f47074662",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Micilini\\VideoStream\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Micilini"
+                }
+            ],
+            "description": "Video Stream with PHP",
+            "support": {
+                "issues": "https://github.com/micilini/video-stream/issues",
+                "source": "https://github.com/micilini/video-stream/tree/1.0.0"
+            },
+            "time": "2022-11-16T16:00:35+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": [],
+    "plugin-api-version": "2.3.0"
+}

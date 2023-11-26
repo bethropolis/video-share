@@ -1,0 +1,5 @@
+{
+    "require": {
+        "micilini/video-stream": "^1.0"
+    }
+}
