@@ -1,5 +1,5 @@
 <?php
-
+require '../config.php'; // Include config file
 header('Content-Type: application/json');
 header('Access-Control-Allow-Origin: *');
 function getVideos($dir, $relativePath = '', $recursive = true) {
@@ -33,7 +33,7 @@ function getVideos($dir, $relativePath = '', $recursive = true) {
 }
 
 
-$videoRoot = 'C:/Users/Administrator/Videos'; // Your video root directory
+$videoRoot = VIDEOS_FOLDER; // Your video root directory
 if (isset($_GET['path'])) {
     $requestedPath = $_GET['path'];
     $folderPath = $videoRoot . '/' . $requestedPath;

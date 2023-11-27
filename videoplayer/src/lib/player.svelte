@@ -6,8 +6,8 @@
   import { DB } from "../static/js/db";
   import stepBackward from "svelte-awesome/icons/stepBackward";
   import stepForward from "svelte-awesome/icons/stepForward";
-  import download from 'svelte-awesome/icons/download';
-  
+  import download from "svelte-awesome/icons/download";
+
   export let params;
   export let videoList = [];
 
@@ -17,12 +17,17 @@
   let folderPath = "";
   let filePath = "";
   let fileName = "";
-
+  let downloadUrl = "";
   let no_prev = false;
   let no_next = false;
 
   function buildUrl(path) {
+    downloadUrl = buildDownloadUrl(path);
     return `${host}/proxy.php?video=${path}`;
+  }
+
+  function buildDownloadUrl(path) {
+    return `${host}/download.php?path=${path}`;
   }
 
   onMount(async () => {
@@ -36,7 +41,7 @@
         await fetchVideos(folderPath);
         fileName = downloadName();
         console.log("🚀 ~ Video source:", videoSource);
-        await videoPlayer.play(); 
+        await videoPlayer.play();
       } catch (error) {
         console.error("Error decrypting:", error);
       }
@@ -192,7 +197,7 @@
         {videoPlayer && !videoPlayer.paused ? "Pause" : "Play"}
       </button>
       <a
-        href={videoSource}
+        href={downloadUrl}
         download={downloadName()}
         target="_blank"
         class="px-4 py-2 bg-blue-500 text-white rounded-md"

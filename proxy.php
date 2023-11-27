@@ -1,11 +1,12 @@
 <?php
+require 'config.php'; // Include config file
 require_once 'monitor.php'; // Include Monitor class file
 require_once 'vendor/autoload.php'; // Include Composer autoload if necessary
 
 header('Access-Control-Allow-Origin: *');
 use Micilini\VideoStream\VideoStream;
 
-$videoRoot = 'C:/Users/Administrator/Videos'; // Your video root directory
+$videoRoot = VIDEOS_FOLDER; // Your video root directory
 $requestedVideo = str_replace('../', '', $_GET['video']); // Prevent directory traversal
 $videoFile = $videoRoot . '/' . $requestedVideo;
 
