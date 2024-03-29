@@ -7,9 +7,9 @@ simple,
 
 2. clone this repository into your `htdocs` folder
    ```
-   git clone https://github.com/bethropolis/video-stream Vidia
+   git clone https://github.com/bethropolis/video-stream public
    ```
-  > The compiled web interface uses `Vidia` folder that's why we are renaming the folder.
+  > The compiled web interface uses `public` folder that's why we are renaming the folder.
 
 3. Edit the `config.php` file
    
@@ -27,7 +27,7 @@ simple,
    ipconfig
    ```
 
-    > example address is `192.168.9.101/Vidia` (ipv4)
+    > example address is `192.168.9.101/public` (ipv4)
 
 
 

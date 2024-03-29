@@ -7,7 +7,10 @@ header('Access-Control-Allow-Origin: *');
 use Micilini\VideoStream\VideoStream;
 
 $videoRoot = VIDEOS_FOLDER; // Your video root directory
+
 $requestedVideo = str_replace('../', '', $_GET['video']); // Prevent directory traversal
+
+
 $videoFile = $videoRoot . '/' . $requestedVideo;
 
 $cacheFile = 'cached_videos/' . $requestedVideo; // Path to cache directory

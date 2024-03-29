@@ -7,7 +7,7 @@
   // Fetch the JSON response from the API
   async function fetchVideos() {
     try {
-      const response = await fetch("http://localhost/Vidia/proxy-test.php");
+      const response = await fetch("http://localhost/public/proxy-test.php");
       const data = await response.json();
       videoList = data;
     } catch (error) {

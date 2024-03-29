@@ -7,10 +7,11 @@ let path = window.location.pathname.replace("/play/", "");
 export let current_video = writable(path);
 
 // host url 
-export let host = window.location.origin + "/Vidia";
-// export let host = "http://192.168.9.104/Vidia";
+export let host = window.location.origin;
+// export let host = "http://localhost:8000";
 let vl = [];
 async function fetchVideos() { 
+  console.log(`the host url is currently: ${host}`)
   try {
     const response = await fetch(`${host}/api/`);
     const data = await response.json();

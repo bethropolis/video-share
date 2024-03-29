@@ -14,7 +14,7 @@
 
 <nav class="justify-between">
   <button class="p-2 hover:bg-gray-100 dark:hover:bg-gray-600 rounded-full">
-    <a href="/Vidia/"> 
+    <a href="/public/"> 
       <Icon data={arrowLeft} class="w-6 h-6 text-gray-500 dark:text-gray-300"/></a>
   </button>
   <div class="flex right items-center">

@@ -8,8 +8,8 @@
   let params = null;
 
   const routes = [
-    { path: "/Vidia/", component: Home },
-    { path: "/Vidia/play/:id", component: Player },
+    { path: "/public/", component: Home },
+    { path: "/public/play/:id", component: Player },
   ];
 
   function handleRouteChange({ path }) {
@@ -17,7 +17,7 @@
       if (route.path.includes(":")) {
         // console.log(path.split("/"), route.path.split("/"))
         const id = path.split("/")[2] || "";
-        params = path.replace("/Vidia/play/", "") || null;
+        params = path.replace("/public/play/", "") || null;
         console.log(
           "🚀 ~ file: App.svelte:20 ~ Page=routes.find ~ params:",
           params

@@ -217,7 +217,7 @@
     </div>
 
     <a
-      href="/Vidia/"
+      href="/public/"
       class="text-sm font-medium text-gray-700 dark:text-gray-200 mt-5 bg-green-500 px-4 py-2"
       >Home</a
     >
