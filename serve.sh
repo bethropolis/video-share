@@ -16,6 +16,20 @@ get_lan_ip() {
     echo "$lan_ip"
 }
 
+# Function to stop the PHP server
+stop_server() {
+    # Find the process ID of the PHP server
+    php_pid=$(ps -ef | grep "[p]hp -S $LAN_IP:$PORT" | awk '{print $2}')
+    if [[ -z "$php_pid" ]]; then
+        echo "Error: PHP server is not running."
+        exit 1
+    fi
+
+    # Kill the PHP server process
+    kill "$php_pid"
+    echo "Server stopped."
+}
+
 # Get the LAN IP address
 LAN_IP=$(get_lan_ip)
 
@@ -24,7 +38,12 @@ PORT=8000
 
 # Check if a custom port is specified
 if [[ ! -z "$1" ]]; then
-    PORT="$1"
+    if [[ "$1" == "--stop" ]]; then
+        stop_server
+        exit 0
+    else
+        PORT="$1"
+    fi
 fi
 
 # Start PHP server
