@@ -8,8 +8,9 @@
   let params = null;
 
   const routes = [
-    { path: "/public/", component: Home },
-    { path: "/public/play/:id", component: Player },
+    { path: "/", component: Home },
+    { path: "", component: Home },
+    { path: "/play/:id", component: Player },
   ];
 
   function handleRouteChange({ path }) {
@@ -17,18 +18,13 @@
       if (route.path.includes(":")) {
         // console.log(path.split("/"), route.path.split("/"))
         const id = path.split("/")[2] || "";
-        params = path.replace("/public/play/", "") || null;
-        console.log(
-          "🚀 ~ file: App.svelte:20 ~ Page=routes.find ~ params:",
-          params
-        );
+        params = path.replace("/play/", "") || null;
         return route.path.split("/")[2] == id;
       }
 
       return route.path == path;
     })?.component;
 
-    // check if path has a : character
     if (path.includes(":")) {
       const id = path.split(":")[1];
     }
